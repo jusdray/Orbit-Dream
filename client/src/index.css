@@ -1,0 +1,513 @@
+/* Design: Orbital Editorial — dark atmospheric field, deliberate text contrast, and restrained Signal Cyan response states. */
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@font-face {
+  font-family: "Nohemi";
+  src: url("/assets/Nohemi-Regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Nohemi";
+  src: url("/assets/Nohemi-SemiBold.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Nohemi";
+  src: url("/assets/Nohemi-Bold.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  --primary: var(--color-blue-700);
+  --primary-foreground: var(--color-blue-50);
+  --sidebar-primary: var(--color-blue-600);
+  --sidebar-primary-foreground: var(--color-blue-50);
+  --chart-1: var(--color-blue-300);
+  --chart-2: var(--color-blue-500);
+  --chart-3: var(--color-blue-600);
+  --chart-4: var(--color-blue-700);
+  --chart-5: var(--color-blue-800);
+  --radius: 0.65rem;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.235 0.015 65);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.235 0.015 65);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.235 0.015 65);
+  --secondary: oklch(0.98 0.001 286.375);
+  --secondary-foreground: oklch(0.4 0.015 65);
+  --muted: oklch(0.967 0.001 286.375);
+  --muted-foreground: oklch(0.552 0.016 285.938);
+  --accent: oklch(0.967 0.001 286.375);
+  --accent-foreground: oklch(0.141 0.005 285.823);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.985 0 0);
+  --border: oklch(0.92 0.004 286.32);
+  --input: oklch(0.92 0.004 286.32);
+  --ring: oklch(0.623 0.214 259.815);
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.235 0.015 65);
+  --sidebar-accent: oklch(0.967 0.001 286.375);
+  --sidebar-accent-foreground: oklch(0.141 0.005 285.823);
+  --sidebar-border: oklch(0.92 0.004 286.32);
+  --sidebar-ring: oklch(0.623 0.214 259.815);
+}
+
+.dark {
+  --primary: var(--color-blue-700);
+  --primary-foreground: var(--color-blue-50);
+  --sidebar-primary: var(--color-blue-500);
+  --sidebar-primary-foreground: var(--color-blue-50);
+  --background: oklch(0.141 0.005 285.823);
+  --foreground: oklch(0.85 0.005 65);
+  --card: oklch(0.21 0.006 285.885);
+  --card-foreground: oklch(0.85 0.005 65);
+  --popover: oklch(0.21 0.006 285.885);
+  --popover-foreground: oklch(0.85 0.005 65);
+  --secondary: oklch(0.24 0.006 286.033);
+  --secondary-foreground: oklch(0.7 0.005 65);
+  --muted: oklch(0.274 0.006 286.033);
+  --muted-foreground: oklch(0.705 0.015 286.067);
+  --accent: oklch(0.274 0.006 286.033);
+  --accent-foreground:  oklch(0.92 0.005 65);
+  --destructive: oklch(0.704 0.191 22.216);
+  --destructive-foreground: oklch(0.985 0 0);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.488 0.243 264.376);
+  --chart-1: var(--color-blue-300);
+  --chart-2: var(--color-blue-500);
+  --chart-3: var(--color-blue-600);
+  --chart-4: var(--color-blue-700);
+  --chart-5: var(--color-blue-800);
+  --sidebar: oklch(0.21 0.006 285.885);
+  --sidebar-foreground: oklch(0.85 0.005 65);
+  --sidebar-accent: oklch(0.274 0.006 286.033);
+  --sidebar-accent-foreground:  oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.488 0.243 264.376);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    position: relative;
+    background: #011418;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    background: #011418;
+    font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+    overflow-x: hidden;
+  }
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  [type="button"]:not(:disabled),
+  [type="submit"]:not(:disabled),
+  [type="reset"]:not(:disabled),
+  a[href],
+  select:not(:disabled),
+  input[type="checkbox"]:not(:disabled),
+  input[type="radio"]:not(:disabled) {
+    @apply cursor-pointer;
+  }
+}
+
+@layer components {
+  /**
+   * Custom container utility that centers content and adds responsive padding.
+   *
+   * This overrides Tailwind's default container behavior to:
+   * - Auto-center content (mx-auto)
+   * - Add responsive horizontal padding
+   * - Set max-width for large screens
+   *
+   * Usage: <div className="container">...</div>
+   *
+   * For custom widths, use max-w-* utilities directly:
+   * <div className="max-w-6xl mx-auto px-4">...</div>
+   */
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem; /* 16px - mobile padding */
+    padding-right: 1rem;
+  }
+
+  .team-directory-page {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 100svh;
+    min-height: 0;
+    padding-top: clamp(56px, 12vh, 100px) !important;
+  }
+
+  .team-directory-content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 0;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .team-directory-header {
+    flex: none;
+    width: 100%;
+  }
+
+  .team-directory-title {
+    font-size: clamp(28px, 6vh, 56px) !important;
+    margin-top: clamp(4px, 1.2vh, 12px) !important;
+  }
+
+  .team-directory-description {
+    font-size: clamp(12px, 1.9vh, 16px) !important;
+    margin-top: clamp(4px, 1.3vh, 12px) !important;
+  }
+
+  .team-directory-tabs {
+    flex: none;
+    margin-top: clamp(8px, 2vh, 18px) !important;
+  }
+
+  .team-directory-tab {
+    min-height: clamp(48px, 8vh, 68px) !important;
+    padding: 8px 12px !important;
+    font-size: clamp(12px, 2.1vh, 16px) !important;
+    gap: clamp(4px, 1vh, 10px) !important;
+  }
+
+  .team-directory-profile {
+    flex: 1;
+    min-height: 0 !important;
+    margin-top: clamp(8px, 2vh, 18px) !important;
+  }
+
+  .team-directory-article {
+    height: 100%;
+    min-height: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .team-directory-bio {
+    min-width: 0;
+  }
+
+  .team-directory-name {
+    font-size: clamp(28px, 5.5vh, 52px) !important;
+  }
+
+  .team-directory-summary,
+  .team-directory-actions {
+    margin-top: clamp(8px, 1.5vh, 18px) !important;
+  }
+
+  .team-directory-portrait {
+    min-height: 0 !important;
+  }
+
+  .team-directory-portrait-image {
+    height: clamp(140px, 40vh, 340px) !important;
+    max-height: 100%;
+    width: auto;
+  }
+
+  .team-directory-member-strip {
+    flex: none;
+    margin-top: clamp(4px, 1vh, 10px) !important;
+  }
+
+  .team-directory-member-list {
+    gap: clamp(8px, 1.8vw, 20px) !important;
+    padding: clamp(8px, 1.5vh, 14px) clamp(12px, 4vw, 48px) !important;
+  }
+
+  .team-directory-member-list button > span:first-child {
+    height: clamp(38px, 7vh, 58px);
+    width: clamp(38px, 7vh, 58px);
+  }
+
+  .team-directory-member-list button > span:nth-child(2) {
+    font-size: clamp(9px, 1.4vh, 11px);
+  }
+
+  .team-directory-member-list button > span:nth-child(3) {
+    font-size: clamp(8px, 1.1vh, 9px);
+  }
+
+  @media (max-height: 560px) {
+    .team-directory-page {
+      padding-top: 48px !important;
+    }
+
+    .team-directory-title {
+      font-size: clamp(24px, 5.4vh, 30px) !important;
+      line-height: 0.98 !important;
+    }
+
+    .team-directory-description {
+      display: none;
+    }
+
+    .team-directory-tabs {
+      margin-top: 6px !important;
+    }
+
+    .team-directory-tab {
+      min-height: 40px !important;
+      padding: 4px 8px !important;
+      font-size: 10px !important;
+    }
+
+    .team-directory-profile {
+      margin-top: 6px !important;
+    }
+
+    .team-directory-bio {
+      padding-left: 8px !important;
+    }
+
+    .team-directory-name {
+      font-size: 25px !important;
+    }
+
+    .team-directory-bio > p:nth-child(2) {
+      margin-top: 4px;
+      font-size: 10px;
+    }
+
+    .team-directory-summary {
+      display: -webkit-box;
+      overflow: hidden;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      font-size: 12px !important;
+      line-height: 1.25 !important;
+      margin-top: 4px !important;
+    }
+
+    .team-directory-actions {
+      margin-top: 6px !important;
+      gap: 8px !important;
+    }
+
+    .team-directory-actions > div[aria-label="Social profiles"] {
+      display: none;
+    }
+
+    .team-directory-actions a {
+      padding: 6px 12px;
+      font-size: 12px !important;
+    }
+
+    .team-directory-portrait-image {
+      height: clamp(120px, 32vh, 155px) !important;
+    }
+
+    .team-directory-member-strip {
+      margin-top: 4px !important;
+    }
+
+    .team-directory-member-list {
+      padding: 5px 12px !important;
+    }
+
+    .team-directory-member-list button > span:first-child {
+      height: 38px !important;
+      width: 38px !important;
+    }
+
+    .team-directory-member-list button > span:nth-child(2) {
+      margin-top: 3px;
+      font-size: 9px !important;
+    }
+
+    .team-directory-member-list button > span:nth-child(3) {
+      display: none;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .team-directory-page {
+      padding-top: clamp(64px, 10vh, 84px) !important;
+    }
+
+    .team-directory-title {
+      font-size: clamp(26px, 4.4vh, 38px) !important;
+    }
+
+    .team-directory-description {
+      font-size: 12px !important;
+      line-height: 1.3 !important;
+      margin-top: 6px !important;
+    }
+
+    .team-directory-tabs {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      margin-top: 8px !important;
+    }
+
+    .team-directory-tab {
+      flex-direction: column;
+      min-width: 0;
+      min-height: 50px !important;
+      padding: 5px 4px !important;
+      font-size: 10px !important;
+      text-align: center;
+    }
+
+    .team-directory-article {
+      grid-template-columns: minmax(0, 1fr);
+      grid-template-rows: minmax(100px, 17vh) minmax(0, 1fr);
+      gap: 4px !important;
+    }
+
+    .team-directory-portrait-image {
+      height: 16vh !important;
+    }
+
+    .team-directory-bio {
+      order: 2 !important;
+      padding-left: 0 !important;
+    }
+
+    .team-directory-name {
+      font-size: clamp(24px, 4vh, 34px) !important;
+    }
+
+    .team-directory-summary {
+      display: -webkit-box;
+      overflow: hidden;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+    }
+
+    .team-directory-member-list {
+      padding: 6px 12px !important;
+    }
+
+    .team-directory-member-list button > span:first-child {
+      height: 42px !important;
+      width: 42px !important;
+    }
+
+    .team-directory-member-list button > span:nth-child(2) {
+      margin-top: 3px;
+      font-size: 9px !important;
+    }
+
+    .team-directory-member-list button > span:nth-child(3) {
+      display: none;
+    }
+  }
+
+  .flex {
+    min-height: 0;
+    min-width: 0;
+  }
+
+  .get-started-cta {
+    isolation: isolate;
+    position: relative;
+    transition: box-shadow 180ms cubic-bezier(0.23, 1, 0.32, 1), transform 160ms cubic-bezier(0.23, 1, 0.32, 1), filter 180ms ease;
+  }
+
+  .get-started-cta::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: -14px -18px;
+    border-radius: inherit;
+    pointer-events: none;
+    opacity: 0;
+    background: radial-gradient(ellipse at center, rgba(101, 247, 255, 0.80) 0%, rgba(4, 217, 255, 0.36) 45%, transparent 75%);
+    filter: blur(10px);
+    transform: scale(0.92);
+    transition: opacity 180ms cubic-bezier(0.23, 1, 0.32, 1), transform 180ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .get-started-cta:hover,
+  .get-started-cta.is-hovered {
+    filter: brightness(1.12) saturate(1.16);
+  }
+
+  .get-started-cta:hover::before,
+  .get-started-cta.is-hovered::before,
+  .get-started-cta:focus-visible::before {
+    opacity: 1;
+    transform: scale(1.08);
+  }
+
+  @media (min-width: 640px) {
+    .container {
+      padding-left: 1.5rem; /* 24px - tablet padding */
+      padding-right: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      padding-left: 2rem; /* 32px - desktop padding */
+      padding-right: 2rem;
+      max-width: 1280px; /* Standard content width */
+    }
+  }
+}

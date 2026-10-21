@@ -1,0 +1,52 @@
+Uploading file (webdev private): /home/ubuntu/webdev-static-assets/figma-team-18-451/18-452.webp (size: 2596802 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/18-452_fcf4bc1d.webp
+Uploading file (webdev private): /home/ubuntu/webdev-static-assets/figma-team-18-451/18-485.webp (size: 3642 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/18-485_dc4d1ae9.webp
+Uploading file (webdev private): /home/ubuntu/webdev-static-assets/figma-team-18-451/18-498.svg (size: 1644 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/18-498_5b746b49.svg
+Uploading file (webdev private): /home/ubuntu/webdev-static-assets/figma-team-18-451/18-502.svg (size: 1924 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/18-502_ce98a0c4.svg
+Uploading file (webdev private): /home/ubuntu/webdev-static-assets/figma-team-18-451/18-506.webp (size: 133344 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/18-506_7795e105.webp
+Uploading file (webdev private): /home/ubuntu/webdev-static-assets/figma-team-18-451/18-507.webp (size: 38900 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/18-507_045448c9.webp
+Uploading file (webdev private): /home/ubuntu/webdev-static-assets/figma-team-18-451/18-512.webp (size: 2114 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/18-512_dc891579.webp
+Uploading file (webdev private): /home/ubuntu/webdev-static-assets/figma-team-18-451/18-516.webp (size: 1976 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/18-516_14efee28.webp
+Uploading file (webdev private): /home/ubuntu/webdev-static-assets/figma-team-18-451/18-520.webp (size: 2014 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/18-520_ae21a4dd.webp
+Uploading file (webdev private): /home/ubuntu/webdev-static-assets/figma-team-18-451/18-524.webp (size: 2696 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/18-524_5c6ec3d3.webp
+Uploading file (webdev private): /home/ubuntu/webdev-static-assets/figma-team-18-451/18-547.svg (size: 226 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/18-547_9170c5b1.svg
+Uploading file (webdev private): /home/ubuntu/webdev-static-assets/figma-team-18-451/18-550.svg (size: 248 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/18-550_cb3d0cb4.svg
+
+========== Upload Summary ==========
+[SUCCESS] /home/ubuntu/webdev-static-assets/figma-team-18-451/18-452.webp -> /manus-storage/18-452_fcf4bc1d.webp
+[SUCCESS] /home/ubuntu/webdev-static-assets/figma-team-18-451/18-485.webp -> /manus-storage/18-485_dc4d1ae9.webp
+[SUCCESS] /home/ubuntu/webdev-static-assets/figma-team-18-451/18-498.svg -> /manus-storage/18-498_5b746b49.svg
+[SUCCESS] /home/ubuntu/webdev-static-assets/figma-team-18-451/18-502.svg -> /manus-storage/18-502_ce98a0c4.svg
+[SUCCESS] /home/ubuntu/webdev-static-assets/figma-team-18-451/18-506.webp -> /manus-storage/18-506_7795e105.webp
+[SUCCESS] /home/ubuntu/webdev-static-assets/figma-team-18-451/18-507.webp -> /manus-storage/18-507_045448c9.webp
+[SUCCESS] /home/ubuntu/webdev-static-assets/figma-team-18-451/18-512.webp -> /manus-storage/18-512_dc891579.webp
+[SUCCESS] /home/ubuntu/webdev-static-assets/figma-team-18-451/18-516.webp -> /manus-storage/18-516_14efee28.webp
+[SUCCESS] /home/ubuntu/webdev-static-assets/figma-team-18-451/18-520.webp -> /manus-storage/18-520_ae21a4dd.webp
+[SUCCESS] /home/ubuntu/webdev-static-assets/figma-team-18-451/18-524.webp -> /manus-storage/18-524_5c6ec3d3.webp
+[SUCCESS] /home/ubuntu/webdev-static-assets/figma-team-18-451/18-547.svg -> /manus-storage/18-547_9170c5b1.svg
+[SUCCESS] /home/ubuntu/webdev-static-assets/figma-team-18-451/18-550.svg -> /manus-storage/18-550_cb3d0cb4.svg
+=====================================
+Total: 12, Success: 12, Failed: 0
